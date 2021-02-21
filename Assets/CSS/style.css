@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+/* card css starts */
+.card {
+  max-width: 22%;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px 15px 65px 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 50%);
+}
+
+.main-image {
+  width: 100%;
+  height: 15rem;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 4rem;
+}
+
+.image-Name-Logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-name-date {
+  flex: 2;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.text-caption {
+  padding-top: 10px;
+}
+
+.logo-img {
+  margin-top: 11px;
+}
+
+.text-likes {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.text-likes img {
+  margin-right: 3px;
+}
+
+hr {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  margin-bottom: 45px;
+}
+
+.text-caption p {
+  font-size: 16px;
+}
+
+#btn-div {
+  width: 100%;
+  text-align: center;
+}
+
+/* card css ends */
+
+/* modal css starts */
+#modal-container {
+  position: relative;
+}
+
+#modal {
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  max-width: 40%;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  margin: 10px;
+  display: none;
+  height: 25em;
+  position: absolute;
+  top: 26%;
+  left: 28%;
+  z-index: 9999;
+}
+
+#modal .image-Name-Logo {
+  order: 3;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal .profile-img {
+  border-radius: 50%;
+  height: 3rem;
+}
+
+#modal .text-name-date {
+  flex: 2;
+  margin-left: 7px;
+  font-size: 17px;
+  margin-top: 4px;
+}
+
+#modal .logo-img {
+  margin-top: 4px;
+}
+
+#modal .main-image-div {
+  order: 1;
+  flex: 1;
+  margin-right: 10px;
+}
+
+#modal .main-image {
+  height: -webkit-fill-available;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0;
+}
+
+#modal .text-caption {
+  order: 2;
+  flex: 1;
+  position: absolute;
+  width: 48%;
+  left: 51%;
+  top: 17%;
+}
+
+#modal hr {
+  position: absolute;
+  width: 48%;
+  right: 0;
+  bottom: unset;
+  top: 18%;
+  margin-right: 1%;
+}
+
+#modal .text-likes {
+  order: 4;
+  position: absolute;
+  top: 75%;
+  left: 51%;
+}
+
+#modal .text-likes img {
+  margin-bottom: 72px;
+}
+
+/* modal css ends */
+
+.container {
+  background-color: darkgray;
+}
+
+#loadMore {
+  width: 15%;
+  height: 50px;
+  font-size: 14px;
+  background-color: rgb(26, 26, 238);
+  color: wheat;
+  border-radius: 5px;
+  border: unset;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: -16px;
+  font-size: 20px;
+  width: 4%;
+  border-radius: 15px;
+  border-color: red;
+  cursor: pointer;
+}
+
+.blurry:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  content: "";
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  padding: 3%;
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    max-width: 47%;
+    height: 35rem;
+  }
+
+  .text-caption p {
+    font-size: 14px;
+  }
+
+  #modal {
+    left: 20%;
+    max-width: 60%;
+  }
+
+  #modal hr {
+    margin-bottom: 13%;
+  }
+
+  hr {
+    margin-bottom: 32px;
+  }
+
+  #modal .text-likes {
+    position: absolute;
+    top: 85%;
+    bottom: unset;
+  }
+
+  .closeBtn {
+    padding: 5px;
+    width: 6%;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    max-width: 75%;
+    height: 35rem;
+  }
+
+  #modal .text-name-date {
+    flex: 2;
+    margin-left: 7px;
+    font-size: 12px;
+    margin-top: 11px;
+  }
+  #modal .logo-img {
+    margin-top: 11px;
+  }
+
+  .closeBtn {
+    padding: 1px;
+  }
+}
