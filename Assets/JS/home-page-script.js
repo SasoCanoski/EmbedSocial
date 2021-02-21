@@ -22,8 +22,7 @@ fetch("./Assets/JSON/data.json")
 showPosts = () => {
     let start = page * 4 - 4;
     let end = page * 4;
-    postArr.forEach((el, i) => el.id = i)
-
+    
     for (let i = start; i < end; i++) {
         mainDiv.innerHTML +=
             `
